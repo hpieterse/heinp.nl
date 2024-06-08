@@ -1,0 +1,148 @@
+---
+import { Image } from "astro:assets";
+import profilePic from "../assets/pic.png";
+
+import Layout from "../layouts/Layout.astro";
+import Article from "../components/Article/Article.astro";
+import Section from "../components/Section/Section.astro";
+import Link from "../components/Link/Link.astro";
+---
+
+<Layout title="Hein Pieterse">
+  <main class="mx-auto max-w-screen-md px-6 sm:px-10 py-10">
+    <header
+      class="grid grid-cols-1 gap-2 justify-items-center md:flex md:items-center md:gap-6"
+    >
+      <div>
+        <Image
+          src={profilePic}
+          alt="A picture of Hein Pieterse"
+          width={144}
+          height={144}
+        />
+      </div>
+      <div>
+        <hgroup class="text-center md:text-left">
+          <h1 class="text-2xl font-medium">Hein Pieterse</h1>
+          <p class="text-xl font-medium">Front-end Developer</p>
+        </hgroup>
+
+        <div class="flex gap-8 mt-2">
+          <Link href="https://www.linkedin.com/in/hein-pieterse/">LinkedIn</Link
+          >
+          <Link href="https://github.com/hpieterse/">GitHub</Link>
+        </div>
+      </div>
+    </header>
+    <div aria-hidden="true" class="bg-gray-300 dark:bg-gray-600 h-px w-full mt-10">
+    </div>
+    <div class="grid grid-cols-1 gap-20 pt-20">
+      <Section>
+        <Fragment slot="heading">Articles</Fragment>
+        <Article
+          links={[
+            {
+              text: "Read article",
+              href: "https://medium.com/gitconnected/not-all-dependencies-are-the-same-7a40362dd262",
+            },
+          ]}
+        >
+          <Fragment slot="title">Not all dependencies are the same</Fragment>
+          Understanding the class of dependency will give insight into how to choose
+          and use dependencies in your project.
+        </Article>
+        <Article
+          links={[
+            {
+              text: "Read article",
+              href: "https://uxdesign.cc/become-a-more-efficient-ux-designer-305d3473479d",
+            },
+          ]}
+        >
+          <Fragment slot="title"
+            >Be a better UX designer with heuristics</Fragment
+          >
+          Improve your design practice by using heuristics. Heuristics can improve
+          the efficiency of your design team and your user test sessions.
+        </Article>
+        <Article
+          links={[
+            {
+              text: "Read article",
+              href: "https://medium.com/@hp.pieterse/https-medium-com-hp-pieterse-how-to-report-on-a-user-test-11de24c010fe",
+            },
+          ]}
+        >
+          <Fragment slot="title">How to report on a user test</Fragment>
+          Any research you conduct is only as successful as your ability to communicate
+          the results of the study.
+        </Article>
+        <Article
+          links={[
+            {
+              text: "Read article",
+              href: "https://medium.com/@hp.pieterse/9-rules-for-efficient-user-tests-75530257c131",
+            },
+          ]}
+        >
+          <Fragment slot="title">9 Rules for Efficient User Tests</Fragment>
+          Interaction with your users is vital. Make sure you get the maximum value
+          out of your usability tests by considering these nine rules.
+        </Article>
+        <Article
+          links={[
+            {
+              text: "Read article",
+              href: "https://www.igi-global.com/article/guidelines-for-error-message-design/190903",
+            },
+          ]}
+        >
+          <Fragment slot="title">Guidelines for Error Message Design</Fragment>
+          To address this lack of research, a set of guidelines for error message
+          design was developed from the literature regarding error message design,
+          as well as from warning design theory.
+        </Article>
+      </Section>
+      <Section>
+        <Fragment slot="heading">Projects</Fragment>
+        <Article
+          links={[
+            {
+              text: "GitHub repository",
+              href: "https://github.com/hpieterse/use-url-query-state",
+            },
+          ]}
+        >
+          <Fragment slot="title">useUrlQueryState</Fragment>
+          React hook that makes it easy to manage the state in the URL query string
+        </Article>
+        <Article
+          links={[
+            {
+              text: "GitHub repository",
+              href: "https://github.com/hpieterse/avodash",
+            },
+            { text: "View site", href: "https://www.heinp.nl/avodash/" },
+          ]}
+        >
+          <Fragment slot="title">Avodash</Fragment>
+          Interactive data visualization written with React and nivo
+        </Article>
+        <Article
+          links={[
+            {
+              text: "GitHub repository",
+              href: "https://github.com/hpieterse/padda",
+            },
+            { text: "View site", href: "https://www.heinp.nl/padda" },
+          ]}
+        >
+          <Fragment slot="title">Padda</Fragment>
+          A simple game with an engine running on WebAssembly
+        </Article>
+      </Section>
+    </div>
+  </main>
+</Layout>
+
+<style></style>

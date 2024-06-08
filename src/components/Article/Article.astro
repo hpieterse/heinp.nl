@@ -1,0 +1,23 @@
+---
+import Link from '../Link/Link.astro';
+
+interface Props {
+	links: {
+        text: string,
+        href: string
+    }[];
+}
+
+const { links } = Astro.props;
+---
+
+<article>
+    <h3 class="font-medium text-lg mb-2"><slot name="title"/></h3>
+    <p><slot/></p>
+    <div class="flex gap-8">
+        {
+            links.map((link) => <Link href={link.href}>{link.text}</Link>)
+        }
+    </div>
+</article>
+
