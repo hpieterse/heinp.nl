@@ -9,5 +9,5 @@ const { href } = Astro.props;
 ---
 
 <a href={href} class="h-10 underline font-medium hover:no-underline flex items-center" target="_blank">
- <slot /><i class="w-3 h-3 ml-2 block fill-current"><Fragment set:html={newTabIcon} /></i>
+  <slot /><i class="w-3 h-3 ml-2 block fill-current"><Fragment set:html={newTabIcon} /></i>
 </a>

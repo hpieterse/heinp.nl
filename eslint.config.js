@@ -3,7 +3,8 @@ export default [
   ...eslintPluginAstro.configs.recommended,
   {
     rules: {
-      "quotes": ["error", "single"],
+      'quotes': ['error', 'single'],
+      'indent': ['warn', 2],
     }
   }
 ];
