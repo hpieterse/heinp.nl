@@ -23,20 +23,20 @@ import Link from '../components/Link/Link.astro';
       </div>
       <div>
         <hgroup class="text-center md:text-left">
-          <h1 class="text-2xl font-medium">Hein Pieterse</h1>
-          <p class="text-xl font-medium">Front-end Developer</p>
+          <h1 class="text-2xl font-medium text-gray-900 dark:text-gray-100">Hein Pieterse</h1>
+          <p class="text-xl text-gray-700 dark:text-gray-300">Software Engineer | Front-end Developer</p>
         </hgroup>
 
-        <div class="flex gap-8 mt-2">
+        <div class="flex gap-8 mt-1 justify-center md:justify-normal">
           <Link href="https://www.linkedin.com/in/hein-pieterse/">LinkedIn</Link
           >
           <Link href="https://github.com/hpieterse/">GitHub</Link>
         </div>
       </div>
     </header>
-    <div aria-hidden="true" class="bg-gray-300 dark:bg-gray-600 h-px w-full mt-10">
+    <div aria-hidden="true" class="bg-gray-300 dark:bg-gray-600 h-px w-full my-10">
     </div>
-    <div class="grid grid-cols-1 gap-20 pt-20">
+    <div class="grid grid-cols-1 gap-24">
       <Section>
         <Fragment slot="heading">Articles</Fragment>
         <Article
@@ -85,7 +85,7 @@ import Link from '../components/Link/Link.astro';
             },
           ]}
         >
-          <Fragment slot="title">9 Rules for Efficient User Tests</Fragment>
+          <Fragment slot="title">9 Rules for efficient user tests</Fragment>
           Interaction with your users is vital. Make sure you get the maximum value
           out of your usability tests by considering these nine rules.
         </Article>
@@ -97,7 +97,7 @@ import Link from '../components/Link/Link.astro';
             },
           ]}
         >
-          <Fragment slot="title">Guidelines for Error Message Design</Fragment>
+          <Fragment slot="title">Guidelines for error message design</Fragment>
           To address this lack of research, a set of guidelines for error message
           design was developed from the literature regarding error message design,
           as well as from warning design theory.
