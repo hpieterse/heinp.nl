@@ -1,13 +1,17 @@
 ---
+import type { boolean } from 'astro/zod';
 import newTabIcon from './up-right-from-square-solid.svg?raw';
 
 interface Props {
 	href: string;
+  newTab?: boolean;
 }
 
-const { href } = Astro.props;
+const { href, newTab = true } = Astro.props;
 ---
 
-<a href={href} class="h-10 underline font-medium hover:no-underline flex items-center text-gray-800 dark:text-gray-200" target="_blank">
-  <slot /><i class="w-3 h-3 ml-2 block fill-current" aria-hidden="true"><Fragment set:html={newTabIcon} /></i>
+<a href={href} class="h-10 underline font-medium hover:no-underline flex items-center text-gray-800 dark:text-gray-200" target={ newTab ? '_blank' : '' }>
+  <slot /> {
+    newTab && <i class="w-3 h-3 ml-2 block fill-current" aria-hidden="true"><Fragment set:html={newTabIcon} /></i>
+  }
 </a>
