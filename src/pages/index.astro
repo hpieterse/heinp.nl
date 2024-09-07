@@ -17,8 +17,11 @@ import Link from '../components/Link/Link.astro';
         <Image
           src={profilePic}
           alt="A picture of Hein Pieterse"
+          densities={[1, 1.5, 2, 4]}
           width={144}
           height={144}
+          loading="lazy"
+          decoding="async"
         />
       </div>
       <div>
